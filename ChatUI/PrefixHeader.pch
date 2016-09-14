@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  ChatUI
+//
+//  Created by 郭洪军 on 9/14/16.
+//  Copyright © 2016 Guo Hongjun. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define RGBCOLOR(r, g, b, p) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:p]
+
+#endif /* PrefixHeader_pch */

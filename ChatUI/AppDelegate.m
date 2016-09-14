@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,29 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor whiteColor];
+    [_window makeKeyAndVisible];
     
-    
-    
-    
-    
-    
+    MainViewController* mainController = [[MainViewController alloc] init];
+    UINavigationController* mainNavi = [[UINavigationController alloc] initWithRootViewController:mainController];
+    [_window setRootViewController:mainNavi];
     
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-}
 
 @end
