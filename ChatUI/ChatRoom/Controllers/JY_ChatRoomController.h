@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class DMTarget;
+
 @interface JY_ChatRoomController : UIViewController
+
+- (void)scrollViewToBottom;
+
+- (instancetype)initWithTarget:(DMTarget *)target;
 
 @end
