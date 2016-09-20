@@ -22,6 +22,7 @@
 
 + (instancetype)getInstance;
 
+//暂时用单利判断，待修改。。。
 @property (nonatomic, assign)BOOL isVoicePlaying;
 
 @end

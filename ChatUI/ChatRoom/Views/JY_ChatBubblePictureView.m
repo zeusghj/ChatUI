@@ -8,6 +8,8 @@
 
 #import "JY_ChatBubblePictureView.h"
 #import "JY_Constants.h"
+#import "JY_Photo.h"
+#import "JY_PhotoBrowserTool.h"
 
 @interface JY_ChatBubblePictureView  ()
 
@@ -59,8 +61,24 @@
     if (!_pictureImageView) {
         _pictureImageView = [[UIImageView alloc] init];
         _pictureImageView.clipsToBounds = YES;
+        _pictureImageView.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(expandPicture:)];
+        if (_pictureImageView.gestureRecognizers.count == 0) {
+            [_pictureImageView addGestureRecognizer:tap];
+        }
     }
     return _pictureImageView;
+}
+
+- (void)expandPicture:(UIGestureRecognizer *)tap {
+    NSMutableArray* photos = [NSMutableArray array];
+    JY_Photo* photo = [[JY_Photo alloc] init];
+    photo.sourceImageView = self.pictureImageView;
+    photo.bigImageUrl = _model.msg;
+    [photos addObject:photo];
+    
+    [JY_PhotoBrowserTool showPhotoWithPhotos:photos currentIndex:0];
 }
 
 

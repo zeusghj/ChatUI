@@ -6,10 +6,10 @@
 //  Copyright © 2016 宋晓建. All rights reserved.
 //
 
-#import "PressButton.h"
+#import "JY_PressButton.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface PressButton ()
+@interface JY_PressButton ()
 
 @property (nonatomic, strong) UIView *recordAlertView;
 @property (nonatomic, weak)   UILabel  *cancelLabel;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation PressButton
+@implementation JY_PressButton
 
 - (instancetype) init {
     if (self = [super init]) {

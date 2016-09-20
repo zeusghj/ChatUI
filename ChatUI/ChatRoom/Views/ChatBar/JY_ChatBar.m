@@ -9,7 +9,7 @@
 #import "JY_ChatBar.h"
 #import "JY_ChatFaceView.h"
 #import "JY_ChatMoreView.h"
-#import "PressButton.h"
+#import "JY_PressButton.h"
 #import "NSString+JYExtensions.h"
 
 NSString* const kJYBatchDeleteTextPrefix = @"kJYBatchDeleteTextPrefix";
@@ -19,7 +19,7 @@ NSString* const kJYBatchDeleteTextSuffix = @"kJYBatchDeleteTextSuffix";
 
 @property (nonatomic, strong) UIView* inputBarBackgroundView;   /** 输入栏目背景视图*/
 @property (nonatomic, strong) UIButton* voiceButton; /**< 切换录音模式按钮*/
-@property (strong, nonatomic) PressButton *voiceRecordButton; /**< 录音按钮 */
+@property (strong, nonatomic) JY_PressButton *voiceRecordButton; /**< 录音按钮 */
 
 @property (strong, nonatomic) UIButton *faceButton; /**< 表情按钮 */
 @property (strong, nonatomic) UIButton *moreButton; /**< 更多按钮 */
@@ -524,7 +524,7 @@ NSString* const kJYBatchDeleteTextSuffix = @"kJYBatchDeleteTextSuffix";
 
 - (UIButton *)voiceRecordButton {
     if (!_voiceRecordButton) {
-        _voiceRecordButton = [[PressButton alloc] init];
+        _voiceRecordButton = [[JY_PressButton alloc] init];
         _voiceRecordButton.hidden = YES;
         _voiceRecordButton.frame = self.textView.bounds;
         _voiceRecordButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

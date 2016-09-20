@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PressButton : UIButton
+@interface JY_PressButton : UIButton
 
 @property (nonatomic, copy) void(^sendVoice)(NSString *);
 
