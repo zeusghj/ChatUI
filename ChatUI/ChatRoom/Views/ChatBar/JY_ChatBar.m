@@ -512,10 +512,10 @@ NSString* const kJYBatchDeleteTextSuffix = @"kJYBatchDeleteTextSuffix";
 - (UIButton *)voiceButton {
     if (!_voiceButton) {
         _voiceButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_voiceButton setBackgroundImage:[UIImage imageNamed:@"ToolViewInputVoice"] forState:UIControlStateNormal];
-        [_voiceButton setBackgroundImage:[UIImage imageNamed:@"ToolViewInputVoiceHL"] forState:UIControlStateHighlighted];
-        [_voiceButton setBackgroundImage:[UIImage imageNamed:@"ToolViewKeyboard"] forState:UIControlStateSelected];
-        [_voiceButton setBackgroundImage:[UIImage imageNamed:@"ToolViewKeyboardHL"] forState:UIControlStateSelected | UIControlStateHighlighted];
+        [_voiceButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_voice"] forState:UIControlStateNormal];
+        [_voiceButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_voice_highlighted"] forState:UIControlStateHighlighted];
+        [_voiceButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_keyboard"] forState:UIControlStateSelected];
+        [_voiceButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_keyboard_highlighted"] forState:UIControlStateSelected | UIControlStateHighlighted];
         [_voiceButton addTarget:self action:@selector(voiceAction:) forControlEvents:UIControlEventTouchUpInside];
         [_voiceButton sizeToFit];
     }
@@ -530,8 +530,8 @@ NSString* const kJYBatchDeleteTextSuffix = @"kJYBatchDeleteTextSuffix";
         _voiceRecordButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [_voiceRecordButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         UIEdgeInsets edgeInsets = UIEdgeInsetsMake(9, 9, 9, 9);
-        UIImage *voiceRecordButtonNormalBackgroundImage = [[UIImage imageNamed:@"VoiceBtn_Black"] resizableImageWithCapInsets:edgeInsets resizingMode:UIImageResizingModeStretch];
-        UIImage *voiceRecordButtonHighlightedBackgroundImage = [[UIImage imageNamed:@"VoiceBtn_BlackHL"] resizableImageWithCapInsets:edgeInsets resizingMode:UIImageResizingModeStretch];
+        UIImage *voiceRecordButtonNormalBackgroundImage = [[UIImage imageNamed:@"chat_bar_voicebtn_back"] resizableImageWithCapInsets:edgeInsets resizingMode:UIImageResizingModeStretch];
+        UIImage *voiceRecordButtonHighlightedBackgroundImage = [[UIImage imageNamed:@"chat_bar_voicebtn_back_highlighted"] resizableImageWithCapInsets:edgeInsets resizingMode:UIImageResizingModeStretch];
         [_voiceRecordButton setBackgroundImage:voiceRecordButtonNormalBackgroundImage forState:UIControlStateNormal];
         [_voiceRecordButton setBackgroundImage:voiceRecordButtonHighlightedBackgroundImage forState:UIControlStateHighlighted];
         _voiceRecordButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
@@ -548,10 +548,10 @@ NSString* const kJYBatchDeleteTextSuffix = @"kJYBatchDeleteTextSuffix";
 - (UIButton *)moreButton {
     if (!_moreButton) {
         _moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_moreButton setBackgroundImage:[UIImage imageNamed:@"TypeSelectorBtn_Black"] forState:UIControlStateNormal];
-        [_moreButton setBackgroundImage:[UIImage imageNamed:@"TypeSelectorBtnHL_Black"] forState:UIControlStateHighlighted];
-        [_moreButton setBackgroundImage:[UIImage imageNamed:@"ToolViewKeyboard"] forState:UIControlStateSelected];
-        [_moreButton setBackgroundImage:[UIImage imageNamed:@"ToolViewKeyboardHL"] forState:UIControlStateSelected | UIControlStateHighlighted];
+        [_moreButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_selectorbtn_back"] forState:UIControlStateNormal];
+        [_moreButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_selectorbtn_back_highlighted"] forState:UIControlStateHighlighted];
+        [_moreButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_keyboard"] forState:UIControlStateSelected];
+        [_moreButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_keyboard_highlighted"] forState:UIControlStateSelected | UIControlStateHighlighted];
         [_moreButton addTarget:self action:@selector(moreAction:) forControlEvents:UIControlEventTouchUpInside];
         [_moreButton sizeToFit];
     }
@@ -561,10 +561,10 @@ NSString* const kJYBatchDeleteTextSuffix = @"kJYBatchDeleteTextSuffix";
 - (UIButton *)faceButton {
     if (!_faceButton) {
         _faceButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_faceButton setBackgroundImage:[UIImage imageNamed:@"ToolViewEmotion"] forState:UIControlStateNormal];
-        [_faceButton setBackgroundImage:[UIImage imageNamed:@"ToolViewEmotionHL"] forState:UIControlStateHighlighted];
-        [_faceButton setBackgroundImage:[UIImage imageNamed:@"ToolViewKeyboard"] forState:UIControlStateSelected];
-        [_faceButton setBackgroundImage:[UIImage imageNamed:@"ToolViewKeyboardHL"] forState:UIControlStateSelected | UIControlStateHighlighted];
+        [_faceButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_emotion"] forState:UIControlStateNormal];
+        [_faceButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_emotion_highlighted"] forState:UIControlStateHighlighted];
+        [_faceButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_keyboard"] forState:UIControlStateSelected];
+        [_faceButton setBackgroundImage:[UIImage imageNamed:@"chat_bar_keyboard_highlighted"] forState:UIControlStateSelected | UIControlStateHighlighted];
         [_faceButton addTarget:self action:@selector(faceAction:) forControlEvents:UIControlEventTouchUpInside];
         [_faceButton sizeToFit];
     }
